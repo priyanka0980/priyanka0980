@@ -5,7 +5,7 @@ source = requests.get("https://www.imdb.com/chart/top")
 soup = BeautifulSoup(source.text,'html.parser')
 
 movies = soup.find('tbody',class_="lister-list").find('tr')
-# print(movies)
+print(movies)
 # print(len(movies))
 name = movies.find('td',class_="titleColumn").a.text
 print(name)
